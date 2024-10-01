@@ -1,0 +1,164 @@
+/* General body styles */
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title section */
+.club-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.highlight-red {
+    color: red;
+    font-size: 50px;
+}
+
+.highlight-gold {
+    color: gold;
+    font-size: 50px;
+}
+
+.club-subtitle {
+    color: black;
+    font-size: 40px;
+    font-family: 'Lucida Console', monospace;
+    font-style: italic;
+}
+
+/* Section divider */
+.section-divider {
+    border: none;
+    height: 8px;
+    background-color: gold;
+}
+
+/* Centered text */
+.centered-text {
+    text-align: center;
+    margin: 15px 0;
+    line-height: 1.6;
+    font-family: 'Verdana';
+
+}
+
+/* Section heading */
+.section-heading {
+    text-align: center;
+    font-family: courier;
+    margin: 10px 0;
+}
+
+.section-usefullinks {
+    text-align: center;
+    font-family: courier;
+    margin: 10px 0;
+}
+
+.highlight-box {
+    background-color: gold;
+    color: whitesmoke;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Navigation link styles */
+
+.nav-link:hover {
+    background-color: #d32f2f; /* Darker shade of red for hover effect */
+}
+
+/* adjusting nav-link style for spacing around card */
+.nav-link {
+    background-color: #f44336;
+    color: whitesmoke;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Resource Card Style */
+.resource-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.resource-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.resource-title:hover {
+    color: #d32f2f;
+}
+
+.resource-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.content-section {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid gold;
+    display: none; /* hidden by default */
+    margin-top: 10px;
+}
+
+/* base link styles for book recc */
+a.book-link {
+    color: #F4B400; /* Base color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it stand out */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* hover effect for book recc*/
+a.book-link:hover {
+    color: #d32f2f; /* darker shade of the link color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* aadd shadow on hover */
+    text-decoration: underline; /* add underline on hover */
+}
+
+/* focus/active state (when the link is clicked etc ect click click) */
+a.book-link:active, a.book-link:focus {
+    color: #003580; /* even darker shade when clicked */
+    outline: none; /* remove default focus outline */
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+}
+
+/* responsive design for small screens such as a smarthphone tablet idk apple watch??????????!!! */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .club-title span {
+        font-size: 35px;
+    }
+}
