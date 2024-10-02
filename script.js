@@ -7,7 +7,7 @@ function toggleSection(id) {
 
 
 // immutable string in js
-const letters = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";
+const letters = "01";
 // script to make words effects on appear disappear with anything but I chose numbers idk
 // snippet of when user hovers over the words on the website it will trigger an action, decalres the css code inside the query selector
 document.querySelector(".club-subtitle").onmouseover = event =>{
@@ -29,12 +29,12 @@ document.querySelector(".club-subtitle").onmouseover = event =>{
                     if(index < iterations) {
                         return event.target.dataset.value[index]
                     }
-                    return letters[Math.floor(Math.random() * 26)]
+                    return letters[Math.floor(Math.random() * 2)]
                 })
                 .join("");
 
             // if iterations reach 9 then clear the interval and reset the counter
             if(iterations >= targetTextLength) clearInterval(interval);
-            iterations +=1/2;
-    }, 30)
+            iterations +=1/3;
+    }, 75)
 }

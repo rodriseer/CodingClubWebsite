@@ -55,30 +55,91 @@
             <span class="highlight-box">Useful Links:</span>
         </h2>
         <nav>
-            <a href="#" class="nav-link">
-                Learning Resources
-            </a>
+            <a class="nav-link">Learning Resources</a>
             <!-- Python programming basics section -->
             <div class="resource-card">
                 <!--Interactive and clickable sources-->
-                <h3 class="resource-title" onclick="toggleSection('python-basics')">Python Programming Basics</h3>
+                <h3 class="resource-title" onclick="toggleSection('python-basics')"><img src="Images/python-logo.ico" alt="Python Icon" style="width: 25px; vertical-align: middle;"> Python Programming Basics</h3>
                 <div id="python-basics" class="content-section" style="display: none;">
                     <p class="resource-description">Learn the foundations of Python programming, including:</p>
                     <ul>
-                        <li>Variables and data types</li>
-                        <li>Control structures (if, loops)</li>
-                        <li>Basic functions and error handling</li>
+                        <!-- Variables and Data Types -->
+                        <li class="nav-link-inside" onclick="toggleSection('vars-data-basics')">
+                            Variables and data types
+                            <ul id="vars-data-basics" class="content-section" style="display: none;">
+                                <p>Firstly, what is a 'variable' in the Python (or any other programming language) world?</p>
+                                <p class="simple-explanation-text">
+                                    In Python, a variable is like a container that holds data. <br><br>
+                                    Think of it as a label for a value. Instead of remembering the value itself, you give it a name (the variable) and use that name to refer to the value later.<br><br>
+                                    You create a variable by simply giving it a name and assigning it a value with the "=" sign:<br><br>
+                                    <code>name = "Your Name"   A variable storing the string of your name </code><br>
+                                    <code>age = 22        A variable storing the integer 22, but you can use any integer here, even if you are a 300 years old vampire</code>
+                                </p>
+                                <p class="simple-explanation-text">
+                                    Data Types:<br>
+                                    - Integers (int): Whole numbers, positive or negative.<br>
+                                    - Floats (float): Numbers with decimals.<br>
+                                    - Strings (str): Text enclosed in quotes.<br>
+                                    - Booleans (bool): Values like 'True' or 'False'.<br>
+                                    - Lists (list): Collections of items in a specific order.<br>
+                                    - Dictionaries (dict): Key-value pairs for storing data.
+                                    <br><br>In Python, you don't need to declare the variables data type like in other programming languages.<br> But keep in mind that each variable data type interacts differently with the code.
+                                </p>
+                            </ul>
+                        </li>
+    
+                        <!-- Control Structures -->
+                        <li class="nav-link-inside" onclick="toggleSection('control-structures')">
+                            Control structures (if, for loops, etc.)
+                            <ul id="control-structures" class="content-section" style="display: none;">
+                                <p>Control structures allow you to control the flow of your program based on conditions.</p>
+                                <p class="simple-explanation-text">
+                                    If Statements:<br>
+                                    Used to run code only if a certain condition is true. For example:<br>
+                                    <code>if age > 18: print("You are an adult!")</code> <br><br>What is happening here is that the code is comparing if its REALLY TRUE that you are OVER 18<br>
+                                    The "if" comparissons works by comparing two variables (usually input vs stored variable) and then making a decision if its TRUE or FALSE<br>
+                                    When its declared to FALSE, it is reccomended to handle this through an ELSE, for example, if you are under 18 the code would declare FALSE and the ELSE statement would handle this:<br>
+                                    <code>else: print("You are under 18!")</code>
+                                    <br><br>
+                                    Loops:<br>
+                                    Loops are used to repeat a block of code. For example, a 'for' loop allows you to iterate over a list of items:
+                                    <code>for color in favorite_colors: print(color)</code>
+                                </p>
+                            </ul>
+                        </li>
+    
+                        <!-- Basic Functions and Error Handling -->
+                        <li class="nav-link-inside" onclick="toggleSection('basic-functions')">
+                            Basic functions and error handling
+                            <ul id="basic-functions" class="content-section" style="display: none;">
+                                <p>Functions are reusable blocks of code that make your programs modular and more manageable.</p>
+                                <p class="simple-explanation-text">
+                                    Functions:<br>
+                                    A function allows you to group a set of instructions under a name, making it easier to reuse and organize code. Here’s an example of a simple function:
+                                    <br><code>def greet(name):<br>  print("Hello, " + name + "!")</code><br>
+                                    You can then call this function as many times as you need:
+                                    <code>greet("Your Name")  This will output: Hello, (whatever your name is)!</code>
+                                </p>
+                                <p class="simple-explanation-text">
+                                    Error Handling: <br>
+                                    In Python, you can handle errors gracefully (I really liked this word when I first learned it) using 'try' and 'except' blocks:
+                                    <br><code>try:<br>&nbsp;&nbsp;  print(10 / 0)<br>except ZeroDivisionError:<br>&nbsp;&nbsp;  print("Cannot divide by zero!")</code>
+                                </p>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
+        </nav>
+    </section>
             
-            <!-- Reading Recommendations -->
+            <!-- reading Recommendations -->
             <div class="resource-card">
-                <h3 class="resource-title" onclick="toggleSection('reading-rec')">Computer and Programming Reading Recommendations</h3>
+                <h3 class="resource-title" onclick="toggleSection('reading-rec')"><img src="Images/read-logo.png" alt="Reading Icon" style="width: 25px; vertical-align: middle;"> Computer and Programming Reading Recommendations</h3>
                 <div id="reading-rec" class="content-section" style="display: none;">
                     <p>Here are some recommended books for learning programming:</p>
                     <ul>
-                        <!--Book rec-->
+                        <!--Book recc-->
                         <li>
                             <strong><a href="https://www.amazon.com/Python-Crash-Course-Hands-Project-Based/dp/1593276036" target="_blank"class="book-link">Python Crash Course</a></strong> by Eric Matthes
                             <p>
@@ -96,7 +157,7 @@
                             </p>
                         </li>
                         <br><br>
-                        <!--Book rec-->
+                        <!--Book recc-->
                         <li>
                             <strong><a href="https://www.amazon.com/Automate-Boring-Stuff-Python-Programming/dp/1593275994" target="_blank" class="book-link">Automate the Boring Stuff with Python</a></strong> by Al Sweigart
                             <p>
@@ -111,7 +172,7 @@
                             </p>
                         </li>
                         <br><br>
-                        <!--Book rec-->
+                        <!--Book recc-->
                         <li>
                             <strong><a href="https://www.amazon.com/Object-Oriented-Python-Master-Building-Games/dp/1718502060" target="_blank" class="book-link">Object-Oriented Python</a></strong> by Irv Kalb
                             <p>
@@ -133,7 +194,7 @@
                 </div>
             </div>
             <!--hackatons-->
-            <a href="#" class="nav-link">
+            <a class="nav-link">
                 Hackathons Information
             </a>
         </nav>
