@@ -5,7 +5,6 @@ function toggleSection(id) {
     section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
 }
 
-
 // immutable string in js
 const letters = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";
 // script to make words effects on appear disappear with anything but I chose numbers idk
