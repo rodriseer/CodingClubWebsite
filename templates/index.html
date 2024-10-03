@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Shady Grove Coding Club - An inclusive community for students interested in programming.">
     <title>USG Coding Club</title>
-    <link rel="icon" type="image/x-icon" href="Images/logo.ico">
-    <link rel="stylesheet" href="styles.css"
+    <link rel="icon" type="image/x-icon" href="static/logo.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"
 </head>
 <body>
     <!--Load image into website structure-->
@@ -16,7 +16,7 @@
     USE <span for different colors for each words
     -->
     <header>
-        <img src="Images/UMSG-Color.png" alt="USG Coding Club Logo" width="345" height="120">
+        <img src="static/UMSG-Color.png" alt="USG Coding Club Logo" width="345" height="120">
         <h1 class="club-title">
             <span class="highlight-red" >Shady</span>         
             <span class="highlight-gold">Grove</span>
@@ -59,7 +59,7 @@
             <!-- Python programming basics section -->
             <div class="resource-card">
                 <!--Interactive and clickable sources-->
-                <h3 class="resource-title" onclick="toggleSection('python-basics')"><img src="Images/python-logo.ico" alt="Python Icon" style="width: 25px; vertical-align: middle;"> Python Programming Basics</h3>
+                <h3 class="resource-title" onclick="toggleSection('python-basics')"><img src="static/python-logo.ico" alt="Python Icon" style="width: 25px; vertical-align: middle;"> Python Programming Basics</h3>
                 <div id="python-basics" class="content-section" style="display: none;">
                     <p class="resource-description">Learn the foundations of Python programming, including:</p>
                     <ul>
@@ -131,11 +131,10 @@
                 </div>
             </div>
         </nav>
-    </section>
-            
+        </section>
             <!-- reading Recommendations -->
             <div class="resource-card">
-                <h3 class="resource-title" onclick="toggleSection('reading-rec')"><img src="Images/read-logo.png" alt="Reading Icon" style="width: 25px; vertical-align: middle;"> Computer and Programming Reading Recommendations</h3>
+                <h3 class="resource-title" onclick="toggleSection('reading-rec')"><img src="static/read-logo.png" alt="Reading Icon" style="width: 25px; vertical-align: middle;"> Computer and Programming Reading Recommendations</h3>
                 <div id="reading-rec" class="content-section" style="display: none;">
                     <p>Here are some recommended books for learning programming:</p>
                     <ul>
@@ -193,12 +192,63 @@
                     </ul>
                 </div>
             </div>
-            <!--hackatons-->
-            <a class="nav-link">
-                Hackathons Information
-            </a>
         </nav>
     </section>
+
+        <!-- hackathons -->
+    <a class="nav-link">Hackathons</a>
+    <div class="resource-card">
+        <!-- what is a Hackathon section -->
+        <h3 class="resource-title" onclick="toggleSection('hackathon-what')">
+            <img src="static/hackconcept.png" alt="Hackathon Icon" style="width: 25px; vertical-align: middle;"> 
+            What is a 'Hackathon'?
+        </h3>
+        <div id="hackathon-what" class="content-section-hackathon" style="display: none;">
+            <p class="resource-description">What is a Hackathon:</p>
+            <ul>
+                <li class="nav-link-inside-hackathon" onclick="toggleSection('hackathon-what')">
+                    A hackathon is a collaborative event where people come together to rapidly develop software or hardware solutions. 
+                    It's often focused on a specific problem, theme, or technology. 
+                    Think of it as a marathon for hackers, where teams work intensively over a short period (usually a few days) to create a functional prototype or proof-of-concept.
+                </li>
+            </ul>
+            </div> 
+            <!--wWhat a Hackathon is not -->
+            <h3 class="resource-title" onclick="toggleSection('hackathon-not')">
+                <img src="static/hackconcept.png" alt="Hackathon Icon" style="width: 25px; vertical-align: middle;"> 
+                What a Hackathon is not
+            </h3>
+            <div id="hackathon-not" class="content-section-hackathon" style="display: none;">
+                <p class="resource-description">What a Hackathon is not:</p>
+                <ul>
+                    <li class="nav-link-inside-hackathon" onclick="toggleSection('hackathon-schedule')">
+                        A hackathon is not a competition to see who codes better, faster, or fancier. 
+                        <br>The focus of hackathons isn't solely on writing code, but on teamwork, creativity, and solving real-world problems by developing a working prototype within a short timeframe.
+                        <br>It’s not a formal event but rather a high-energy space for rapid innovation and experimentation.
+                    </li>
+                </ul>
+            </div>
+            
+        <!-- interactive and clickable sources -->
+        <h3 class="resource-title" onclick="toggleSection('hackathon')">
+            <img src="static/hackaton.png" alt="Hackathon Icon" style="width: 25px; vertical-align: middle;"> 
+            Hackathons Schedule (USA)
+        </h3>
+            <div id="hackathon" class="content-section-hackathon" style="display: none;">
+                <p class="resource-description">Hackathon Information:</p>
+                <ul>
+                    <li class="nav-link-inside-hackathon" onclick="toggleSection('hackathon-schedule')">
+                        Schedule:
+                        <ul id="hackathon-schedule" class="content-section-hackathon" style="display: none;">
+                            <!-- add schedule items here -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+
+    </div>
 
     <!--footer yeah-->
     <footer>
@@ -208,6 +258,6 @@
 
     <!-- JavaScript to make sure the buttons are clickable and able to display information after clicked 
          Always add the JS code before closing the BODY-->
-         <script src="script.js"></script>
+         <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
