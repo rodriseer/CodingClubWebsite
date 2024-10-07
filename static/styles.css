@@ -134,6 +134,31 @@ body {
     margin-top: 10px;
 }
 
+/*for the hackathon layout here*/
+.content-section-hackathon {
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid #01dd8e;
+    display: none;
+    margin-top: 10px;
+}
+
+.nav-link-inside-hackathon {
+    background-color: whitesmoke;
+    color: rgb(60, 60, 60);
+    padding: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Arial';
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
 .simple-explanation-text {
     font-family: Arial, sans-serif;
     font-size: 16px;
