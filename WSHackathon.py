@@ -27,7 +27,7 @@ class HackathonEvent(Base):
     state = Column(String(255), nullable=False)
 
 # set up mysql db connection
-DATABASE_URL = "mysql+mysqlconnector://root:47Nbm|}4B11=@localhost:3306/hackathons"
+DATABASE_URL = "mysql+mysqlconnector://root:(DB PASSWORD INCLUDED IN A SEPARATE FILE)@localhost:3306/hackathons"
 print("Setting up database connection...")
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
